@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "1f215d99-76d1-43fb-9724-501b872ec3cf",
+		"name": "Small API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27560525"
+	},
+	"item": [
+		{
+			"name": "Get All products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products?fields=name,price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "name,price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"entertainment center\",\r\n    \"price\": 59,\r\n    \"featured\": true,\r\n    \"company\": \"caressa\"\r\n  }\r\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products/static",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"static"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
